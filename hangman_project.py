@@ -1,22 +1,28 @@
 # Author MrS & TW 1/15/21
 
-import random 
+import random
 
-wordlist = ["area", "book", "business", "case", "child", "comany", "country", "day", "eye", "fact", "family", "government", "grou", "hand", "home", "job", "life", "lot", "man", "money", "month", "mother", "night", "number", "part", "people", "place", "point", "problem", "program", "question", "right", "room", "school", "state", "story", "student", "study", "system", "thing", "time", "water", "way", "week", "woman", "word", "work", "world", "year"]
+wordlist = ["area", "book", "business", "case", "child", "comany", "country", "day", "eye", "fact", "family", "government", "ground", "hand", "home", "job", "life", "lot", "man", "money", "month", "mother", "night", "number", "part", "people", "place", "point", "problem", "program", "question", "right", "room", "school", "state", "story", "student", "study", "system", "thing", "time", "water", "way", "week", "woman", "word", "work", "world", "year"]
 
 words = random.choice(wordlist)
 
 print(len(words))
 
-correct = ['_'] * len(words)
-wrong = []
+correct = ['_'] * len(words) # ***** needs to be in function and defined
+wrong = []  # Defined in if else statement
 
-def length():
+
+def word_length():
+    correct = ['_'] * len(words) # ***** needs to be defined
     for i in correct:
         print(i, end = ' ')
     print()
 
-length()
+
+word_length()
+
+# Problem when running program. When giving guesses, they are identified as wrong
+# problem may be in if else statement or the variable correct (line 11)
 
 while True:
 
@@ -28,9 +34,9 @@ while True:
         index = 0
         for i in words:
             if i == guess:
-                right[index] = guess
+                correct[index] = guess
             index += 1
-        length()
+        word_length()
     else:
         if guess not in wrong:
             wrong.append(guess)
@@ -45,4 +51,5 @@ while True:
         print('You Win!')
         break
 
-
+    # Make top and bottom row of hangman picture as list
+    # Make the separate body parts and have the program call them to the function
