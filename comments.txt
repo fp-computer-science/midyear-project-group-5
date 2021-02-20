@@ -1,0 +1,4 @@
+The program is not 100 lines when you remove extraneous whitespace.
+There is no 2 player mode.
+There are no comments.
+The error handling could be more robust.
